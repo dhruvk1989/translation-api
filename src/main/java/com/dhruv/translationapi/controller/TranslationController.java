@@ -1,24 +1,20 @@
-package com.dhruv.translationapi.endpoints;
+package com.dhruv.translationapi.controller;
 
-import com.dhruv.translationapi.FileReaderClass;
+import com.dhruv.translationapi.util.FileReaderClass;
 import com.dhruv.translationapi.ObjectFactory;
 import com.dhruv.translationapi.model.request.RequestModel;
 import com.dhruv.translationapi.model.response.TranslationDataModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.net.http.HttpHeaders;
 
 @RestController
-public class TranslationEndPoint {
+public class TranslationController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -36,7 +32,7 @@ public class TranslationEndPoint {
 
     @GetMapping("getStuff")
     public void translate() throws Exception {
-        RequestModel request = new RequestModel((new FileReaderClass()).extractText(), "en", "ar", "text");
+        RequestModel request = new RequestModel((new FileReaderClass()).extractText(), "ar", "en", "text");
         URI uri = UriComponentsBuilder.fromUriString(objectFactory.getBASE_URL())
                 .queryParam("key", objectFactory.getKEY())
                 .build().toUri();

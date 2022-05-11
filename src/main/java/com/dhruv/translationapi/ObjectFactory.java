@@ -1,5 +1,8 @@
 package com.dhruv.translationapi;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ObjectFactory {
     private final String BASE_URL = "https://translation.googleapis.com/language/translate/v2";
     private final String KEY = "AIzaSyCgi6TwxoG4pFrhqjGwYeHtrux4rjoqNM0";

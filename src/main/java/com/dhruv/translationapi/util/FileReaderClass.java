@@ -1,8 +1,7 @@
-package com.dhruv.translationapi;
+package com.dhruv.translationapi.util;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class FileReaderClass {

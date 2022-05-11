@@ -18,9 +18,4 @@ public class TranslationApiApplication {
 		return new RestTemplate();
 	}
 
-	@Bean
-	public ObjectFactory getObjectFactory(){
-		return new ObjectFactory();
-	}
-
 }
