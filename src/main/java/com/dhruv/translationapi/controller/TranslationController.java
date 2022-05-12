@@ -1,7 +1,7 @@
 package com.dhruv.translationapi.controller;
 
 import com.dhruv.translationapi.util.FileReaderClass;
-import com.dhruv.translationapi.ObjectFactory;
+import com.dhruv.translationapi.util.ObjectFactory;
 import com.dhruv.translationapi.model.request.RequestModel;
 import com.dhruv.translationapi.model.response.TranslationDataModel;
 import org.springframework.beans.factory.annotation.Autowired;
