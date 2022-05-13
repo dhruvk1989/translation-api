@@ -3,6 +3,7 @@ package com.dhruv.translationapi.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.HashMap;
 
 public class FileReaderClass {
 
@@ -19,6 +20,9 @@ public class FileReaderClass {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println((new FileReaderClass()).extractText());
+        //System.out.println((new FileReaderClass()).extractText());
+        HashMap newh = new HashMap();
+        newh.put("1", "1");
+        System.out.println(newh.get("2"));
     }
 }
