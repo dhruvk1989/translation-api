@@ -10,6 +10,7 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.xml.sax.ContentHandler;
 
@@ -19,6 +20,9 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 public class PDFExtractor {
+
+    @Value("${file.location}")
+    private String location;
 
     public void generatePdf() throws IOException, DocumentException, TikaException {
         File file = new File("/temp/newFile.txt");
@@ -116,8 +120,9 @@ public class PDFExtractor {
     }
 
     public File writeToTextFile(String text) throws IOException {
-        String fileName = "dhruv" + Math.random();
-        File stream = new File("/temp/" + fileName);
+        int random = (int) (Math.random()*10000);
+        String fileName = "dhruv_" + random;
+        File stream = new File(location + fileName);
         FileUtils.write(stream, text, StandardCharsets.UTF_16);
         return new File(fileName);
     }

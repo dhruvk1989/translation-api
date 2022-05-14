@@ -1,5 +1,6 @@
 package com.dhruv.translationapi.model.request;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class Mail {
 
     private String contentType;
 
-    private List < Object > attachments;
+    private List < File > attachments;
 
     public Mail() {
         contentType = "text/plain";
@@ -85,11 +86,11 @@ public class Mail {
         this.mailContent = mailContent;
     }
 
-    public List< Object > getAttachments() {
+    public List<File> getAttachments() {
         return attachments;
     }
 
-    public void setAttachments(List < Object > attachments) {
+    public void setAttachments(List < File > attachments) {
         this.attachments = attachments;
     }
 

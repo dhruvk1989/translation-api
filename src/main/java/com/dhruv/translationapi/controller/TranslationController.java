@@ -34,8 +34,8 @@ public class TranslationController {
     private ObjectFactory2 objectFactory;
 
     @PostMapping("/translate")
-    public void translateFile(@RequestParam String file, @RequestBody RequestModelUser requestModelUser){
-        service.translate(file, requestModelUser);
+    public String translateFile(@RequestParam String file, @RequestBody RequestModelUser requestModelUser){
+        return service.translate(file, requestModelUser);
     }
 
 
