@@ -4,5 +4,5 @@ mvnw.cmd
 .mvn/**
 target/**
 output
-.src/main/java/comdhruv/translationapi\/util/ObjectFactory2.java
-.src/main/java/com/dhruv/translationapi/dao/**
+src/main/java/com/dhruv/translationapi/util/ObjectFactory2.java
+src/main/java/com/dhruv/translationapi/dao
