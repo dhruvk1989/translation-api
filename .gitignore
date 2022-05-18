@@ -8,6 +8,7 @@ target/
 mvnw
 mvnw.cmd
 output
+src/main/java/com/dhruv/translationapi/util/ObjectFactory2.java
 
 ### STS ###
 .apt_generated
