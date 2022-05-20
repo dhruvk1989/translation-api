@@ -38,5 +38,9 @@ public class TranslationController {
         return service.translate(file, requestModelUser);
     }
 
+    @GetMapping
+    public String hello(){
+        return "Hello";
+    }
 
 }
